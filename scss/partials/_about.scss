@@ -1,0 +1,32 @@
+.about {
+    padding-top: 3em;
+
+    .container {
+        display: grid;
+        grid-template-columns: [about-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [pic-end] 2fr [about-end];
+    }
+
+    .about-img {
+        max-height: 25em;
+        grid-column: about-start / pic-end;
+        grid-row: 1 / 2;
+        filter: brightness(50%);
+    }
+
+    .about-title {
+        grid-column: name-start / port-end;
+        grid-row: 1 / 2;
+        align-self: end;
+        margin-bottom: .2em;
+        z-index: 222;
+    }
+
+    .about-subtitle,
+    .about-text {
+        grid-column: 1 / -1;
+    }
+
+    .about-subtitle {
+        margin: .5em 0;
+    }
+}

@@ -3,6 +3,14 @@ body {
     font-family: $ff-s;
     line-height: 1.6;
     background: $white;
+    font-size: .875rem;
+
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 55em;
 }
 
 h1, h2, h3, p {
@@ -24,13 +32,13 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.95rem;
     color: $gold;
+    line-height: 1;
 }
 
 h3 {
-    font-size: 1.2rem;
-    color: $black;
+    @include Lato($fs: 1rem, $color: $black)
 }
 
 img {
