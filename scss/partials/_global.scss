@@ -11,12 +11,14 @@ h1, h2, h3, p {
 }
 
 h1 {
-    color: $gold;
-    line-height: 1;
-    font-size: 3.125rem;
+    color: $black;
+    line-height: 2;
+    font-size: 1.4rem;
+    font-weight: $fw-n;
+    text-align: center;
 
     span {
-        @include Lato($fs: 5.5rem, $color: $gold);
+        @include Lato($fs: 2.8rem, $color: $gold);
         display: block;
     }
 }
@@ -29,4 +31,8 @@ h2 {
 h3 {
     font-size: 1.2rem;
     color: $black;
+}
+
+img {
+    width: 100%;
 }

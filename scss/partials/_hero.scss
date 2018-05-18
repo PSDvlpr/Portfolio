@@ -1,0 +1,26 @@
+.hero {
+    background-image: url(../../images/hero-bg.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1::before,
+h1::after {
+    content: '';
+    width: 70%;
+    height: 2px;
+    background: $gold;
+    display: block;
+}
+
+h1::before {
+    margin: 0 auto 1.5em;
+}
+
+h1::after {
+    margin: 1.5em auto 0;
+}
