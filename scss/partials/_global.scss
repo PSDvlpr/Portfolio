@@ -5,8 +5,28 @@ body {
     background: $white;
 }
 
+h1, h2, h3, p {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
 h1 {
     color: $gold;
     line-height: 1;
     font-size: 3.125rem;
+
+    span {
+        @include Lato($fs: 5.5rem, $color: $gold);
+        display: block;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    color: $gold;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: $black;
 }

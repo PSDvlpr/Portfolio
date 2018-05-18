@@ -11,3 +11,12 @@ $breakpoints: (
         @content;
     }
 }
+
+@mixin Lato($fs, $ls: .1em, $color: $black, $tt: uppercase, $lh: 1) {
+    font-family: $ff-ss;
+    font-size: $fs;
+    letter-spacing: $ls;
+    color: $color;
+    text-transform: $tt;
+    line-height: $lh;
+}
