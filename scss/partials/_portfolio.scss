@@ -1,0 +1,72 @@
+.portfolio {
+    text-align: center;
+    background: $light-gray;
+    padding: 5em 0;
+}
+
+.portfolio-items {
+    display: grid;
+    grid-template-columns:  repeat(2, 1fr);
+    grid-gap: .1em;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+
+    img {
+        display: block;
+    }
+
+    figcaption {
+        position: absolute;
+        top: 100%;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        padding: 1.5em;
+        background: rgba($gold, .75);
+        color: $white;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        transition: top ease-in-out 290ms;
+    }
+
+    &:hover figcaption,
+    &:hover focus {
+        top: 0;
+    }
+}
+
+.portfolio-item.featured {
+    grid-column: 1 / span 2;
+    grid-row: 1 /span 2;
+}
+
+.portfolio-title {
+    color: $white;
+    font-size: 1.3rem;
+    margin-bottom: auto;
+
+    .featured & {
+        font-size: 3rem;
+    }
+}
+
+.portfolio-desc {
+    display: none;
+
+    .featured & {
+        display: block;
+    }
+}
+
+.portfolio-link {
+    color: $white;
+    font-weight: $fw-b;
+    font-size: 0.8rem;
+    text-decoration: none;
+    align-self: flex-start;
+}
