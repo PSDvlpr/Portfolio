@@ -1,0 +1,15 @@
+.footer {
+    padding: 2em 0;
+    background: $black;
+    text-align: center;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+    margin: 1.75em auto 2em;
+}
+
+.icon {
+    font-size: 3rem;
+}
