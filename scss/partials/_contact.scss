@@ -9,6 +9,31 @@
 form {
     display: flex;
     flex-direction: column;
+
+    @include respond-to(medium) {
+        display: grid;
+        grid-column-gap: 1em;
+        grid-template-areas:
+        "name   email"
+        "message    message"
+        "   .       button";
+
+        .name{
+            grid-area: name;
+        }
+
+        .email {
+            grid-area: email;
+        }
+
+        .message {
+            grid-area: message;
+        }
+
+        .button {
+            grid-area: button;
+        }
+    }
 }
 
 label {
@@ -38,5 +63,5 @@ textarea {
     margin-left: auto;
     background: $gold;
     border: none;
-    padding: .5em 1em;
+    padding: .8em 1.2em;
 }
