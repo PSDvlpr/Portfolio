@@ -1,16 +1,20 @@
 .about {
-    padding-top: 3em;
+    padding: 3em 0;
 
     .container {
         display: grid;
         grid-template-columns: [about-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [pic-end] 2fr [about-end];
+        grid-column-gap: .5em;
     }
 
     .about-img {
-        max-height: 25em;
         grid-column: about-start / pic-end;
         grid-row: 1 / 2;
         filter: brightness(50%);
+
+        @include respond-to(medium) {
+            grid-row: 1 / 4;
+        }
     }
 
     .about-title {
@@ -19,14 +23,34 @@
         align-self: end;
         margin-bottom: .2em;
         z-index: 222;
+
+        @include respond-to(medium) {
+            margin-top: .3em;
+        }
     }
+
 
     .about-subtitle,
     .about-text {
         grid-column: 1 / -1;
+
+        @include respond-to(medium) {
+            grid-column: pic-end / about-end;
+        }
     }
 
     .about-subtitle {
         margin: .5em;
+
+         @include respond-to(medium) {
+             grid-row: 2 / 3;
+         }
+    }
+
+    .about-text {
+
+        @include respond-to(medium) {
+            grid-row: 3 / 4;
+        }
     }
 }

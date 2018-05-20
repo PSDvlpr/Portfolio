@@ -5,6 +5,9 @@ body {
     background: $white;
     font-size: .875rem;
 
+    @include respond-to(medium) {
+        font-size: 1.125rem;
+    }
 }
 
 .container {
@@ -13,7 +16,7 @@ body {
     max-width: 55em;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, h4 p {
     margin-top: 0;
     margin-bottom: 1em;
 }
@@ -21,13 +24,21 @@ h1, h2, h3, p {
 h1 {
     color: $black;
     line-height: 2;
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     font-weight: $fw-n;
     text-align: center;
 
+    @include respond-to(medium) {
+        font-size: 4rem;
+    }
+
     span {
-        @include Lato($fs: 2.8rem, $color: $gold);
         display: block;
+        @include Lato($fs: 2.8rem, $color: $gold);
+
+        @include respond-to(medium) {
+            font-size: 6rem;
+        }
     }
 }
 
@@ -35,10 +46,18 @@ h2 {
     font-size: 1.95rem;
     color: $gold;
     line-height: 1;
+
+    @include respond-to(medium) {
+        font-size: 2.75rem;
+    }
 }
 
 h3 {
-    @include Lato($fs: 1rem, $color: $black)
+    @include Lato($fs: 1rem, $color: $black);
+
+    @include respond-to(medium) {
+        font-size: 1.5rem;
+    }
 }
 
 img {
