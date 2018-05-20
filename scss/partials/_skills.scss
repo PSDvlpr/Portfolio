@@ -1,0 +1,35 @@
+.skills {
+    display: flex;
+    color: rgba($white, .7);
+
+    h2 {
+        color: $white;
+
+        &::after {
+            content: '';
+            width: 25%;
+            height: 2px;
+            background: rgba($white, .5);
+            display: block;
+            margin: 1em auto 0;
+        }
+    }
+
+    @supports(display: grid) {
+        display: grid;
+        grid-template-columns: 1fr minmax(auto, 30em) 1fr;
+    }
+}
+
+.skills-middle {
+    background: $black;
+    padding: 2em 5vw;
+    text-align: center;
+}
+
+.skills-left img,
+.skills-right img {
+    object-fit: cover;
+    min-height: 100%;
+    min-width: 100%;
+}
