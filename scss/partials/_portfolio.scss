@@ -8,6 +8,11 @@
     display: grid;
     grid-template-columns:  repeat(2, 1fr);
     grid-gap: .1em;
+
+    @include respond-to(medium) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: .5em;
+    }
 }
 
 .portfolio-item {
