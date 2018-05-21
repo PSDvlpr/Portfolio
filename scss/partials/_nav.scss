@@ -1,21 +1,31 @@
 .site-nav {
     background: $black;
-    position: fixed;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 15%;
     z-index: 666;
-    transition: transform ease-out 250ms;
+    transition: transform ease-out 300ms;
 
     transform: translateX(-100%);
+
+    @include respond-to(medium) {
+        transform: translateX(0);
+        right: 0;
+        position: absolute;
+        background: transparent;
+    }
 }
 
 .wrapper {
-    transition: transform ease-out 250ms;
+    transition: transform ease-out 300ms;
 }
 
 .nav-open {
+    height: 100vh;
+    overflow-y: hidden;
+
     .site-nav {
         transform: translateX(0);
     }
@@ -34,6 +44,13 @@
     flex-direction: column;
     justify-content: space-around;
 
+    @include respond-to(medium) {
+        flex-direction: row;
+        justify-content: flex-end;
+        height: 5em;
+        align-items: center;
+    }
+
     li {
         text-align: center;
     }
@@ -42,8 +59,31 @@
         text-decoration: none;
         padding: .7em;
         display: inline-block;
+        position: relative;
 
         @include Lato($fs: 2rem, $color: $gold);
+
+        @include respond-to(medium) {
+            font-size: 1.6rem;
+
+            &::before {
+                content: '';
+                display: block;
+                height: .1em;
+                background: $gold;
+                position: absolute;
+                bottom: -.1em;
+                left: 0;
+                right: 0;
+                transform: scale(0,1);
+                transform-origin: left;
+                transition: transform ease-in-out 300ms;
+            }
+
+            &:hover::before {
+                transform: scale(1,1);
+            }
+        }
     }
 }
 
@@ -53,6 +93,10 @@
     top: 1em;
     left: .6em;
     cursor: pointer;
+
+    @include respond-to(medium) {
+        display: none;
+    }
 }
 
 .hamburger,
@@ -64,6 +108,7 @@
     height: 3px;
     width: 1.75em;
     border-radius: 3px;
+    transition: ease-in-out 800ms;
 }
 
 .hamburger::before {
@@ -72,4 +117,16 @@
 
 .hamburger::after {
     transform: translateY(3px);
+}
+
+.open .hamburger {
+    transform: rotate(45deg);
+}
+
+.open .hamburger::before {
+    opacity: 0;
+}
+
+.open .hamburger::after {
+    transform: translateY(-3px) rotate(-90deg);
 }
