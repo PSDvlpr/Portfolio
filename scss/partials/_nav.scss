@@ -53,6 +53,10 @@
 
     li {
         text-align: center;
+
+        @include respond-to(medium) {
+            margin-right: 1em;
+        }
     }
 
     a {
@@ -65,14 +69,15 @@
 
         @include respond-to(medium) {
             font-size: 1.6rem;
+            padding: 0;
 
             &::before {
                 content: '';
                 display: block;
-                height: .1em;
+                height: .063em;
                 background: $gold;
                 position: absolute;
-                bottom: -.1em;
+                bottom: -.5em;
                 left: 0;
                 right: 0;
                 transform: scale(0,1);
