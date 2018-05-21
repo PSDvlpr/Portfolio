@@ -1,0 +1,75 @@
+.site-nav {
+    background: $black;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 15%;
+    z-index: 666;
+    transition: transform ease-out 250ms;
+
+    transform: translateX(-100%);
+}
+
+.wrapper {
+    transition: transform ease-out 250ms;
+}
+
+.nav-open {
+    .site-nav {
+        transform: translateX(0);
+    }
+
+    .wrapper {
+        transform: translateX(85%);
+    }
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    li {
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+        padding: .7em;
+        display: inline-block;
+
+        @include Lato($fs: 2rem, $color: $gold);
+    }
+}
+
+.menu-toggle {
+    padding: 1em;
+    position: absolute;
+    top: 1em;
+    left: .6em;
+    cursor: pointer;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    display: block;
+    background: $black;
+    height: 3px;
+    width: 1.75em;
+    border-radius: 3px;
+}
+
+.hamburger::before {
+    transform: translateY(-6px);
+}
+
+.hamburger::after {
+    transform: translateY(3px);
+}

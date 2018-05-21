@@ -10,133 +10,153 @@
 </head>
 <body>
 
-    <div class="hero">
-        <h1>Welcome to my <span>Portfolio</span></h1>
+    <nav class="site-nav">
+        <ul class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="wrapper">
+        <div class="menu-toggle">
+            <div class="hamburger"></div>
+        </div>
+
+        <div class="hero">
+            <h1>Welcome to my <span>Portfolio</span></h1>
+        </div>
+
+        <section class="about">
+            <div class="container">
+                <img src="images/about-pic.png" alt="" class="about-img">
+                <h2 class="about-title">My Portfolio</h2>
+                <h3 class="about-subtitle">Junior Front-End Developer</h3>
+                <div class="about-text">
+                    <p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell
+                    who the arch-villain's going to be? He's the exact opposite of the hero.</p>
+                    <p>And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids.
+                    They called me Mr Glass.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills">
+            <div class="skills-left">
+                <img src="images/quote-left.jpeg" alt="monitor with js code">
+            </div>
+            <div class="skills-middle">
+                <h2>Skills</h2>
+                <p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on
+                    it?</p>
+            </div>
+            <div class="skills-right">
+                <img src="images/quote-right.jpeg" alt="screen of html code">
+            </div>
+        </section>
+
+        <section class="portfolio">
+            <div class="container">
+                <h2>My work</h2>
+                <div class="portfolio-items">
+                    <figure class="portfolio-item featured">
+                        <img src="https://placeimg.com/640/640/any">
+                        <figcaption>
+                            <h3 class="portfolio-title">Project name</h3>
+                            <p class="portfolio-desc">Short desc</p>
+                            <a href="#" class="portfolio-link">
+                                More info
+                                <i class="portfolio-arrow fas fa-long-arrow-alt-right"></i>
+                            </a>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="portfolio-item">
+                        <img src="https://placeimg.com/640/640/any">
+                        <figcaption>
+                            <h3 class="portfolio-title">Project name</h3>
+                            <p class="portfolio-desc">Short desc</p>
+                            <a href="#" class="portfolio-link">
+                                More info
+                                <i class="portfolio-arrow fas fa-long-arrow-alt-right"></i>
+                            </a>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="portfolio-item">
+                        <img src="https://placeimg.com/640/640/any">
+                        <figcaption>
+                            <h3 class="portfolio-title">Project name</h3>
+                            <p class="portfolio-desc">Short desc</p>
+                            <a href="#" class="portfolio-link">
+                                More info
+                                <i class="portfolio-arrow fas fa-long-arrow-alt-right"></i>
+                            </a>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="portfolio-item">
+                        <img src="https://placeimg.com/640/640/any">
+                        <figcaption>
+                            <h3 class="portfolio-title">Project name</h3>
+                            <p class="portfolio-desc">Short desc</p>
+                            <a href="#" class="portfolio-link">
+                                More info
+                                <i class="portfolio-arrow fas fa-long-arrow-alt-right"></i>
+                            </a>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="portfolio-item">
+                        <img src="https://placeimg.com/640/640/any">
+                        <figcaption>
+                            <h3 class="portfolio-title">Project name</h3>
+                            <p class="portfolio-desc">Short desc</p>
+                            <a href="#" class="portfolio-link">
+                                More info
+                                <i class="portfolio-arrow fas fa-long-arrow-alt-right"></i>
+                            </a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="container">
+                <h2>Contact me</h2>
+                <form action="">
+                    <label class="name">Name:
+                        <input type="text" id="name">
+                    </label>
+
+                    <label class="email">Email:
+                        <input type="email" id="email">
+                    </label>
+
+                    <label class="message">Message:
+                        <textarea id="message"></textarea>
+                    </label>
+
+                    <input class="button" type="submit" value="SEND" />
+                </form>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <h4>Find me on</h4>
+                <div class="icons">
+                    <i class="icon fab fa-linkedin"></i>
+                    <i class="icon fab fa-github-square"></i>
+                </div>
+            </div>
+        </footer>
     </div>
 
-    <section class="sec">
-        <div class="sec-left">
-            <img src="images/quote-left.jpeg" alt="monitor with js code">
-        </div>
-        <div class="sec-middle">
-            <h2>Sentencja</h2>
-            <p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it?</p>
-        </div>
-        <div class="sec-right">
-            <img src="images/quote-right.jpeg" alt="screen of html code">
-        </div>
-    </section>
-
-    <section class="about">
-        <div class="container">
-            <img src="images/about-pic.png" alt="" class="about-img">
-            <h2 class="about-title">My Portfolio</h2>
-            <h3 class="about-subtitle">Junior Front-End Developer</h3>
-            <div class="about-text">
-                <p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell
-                who the arch-villain's going to be? He's the exact opposite of the hero.</p>
-                <p>And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids.
-                They called me Mr Glass.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="portfolio">
-        <div class="container">
-            <h2>My work</h2>
-            <div class="portfolio-items">
-                <figure class="portfolio-item featured">
-                    <img src="https://placeimg.com/640/640/any">
-                    <figcaption>
-                        <h3 class="portfolio-title">Project name</h3>
-                        <p class="portfolio-desc">Short desc</p>
-                        <a href="#" class="portfolio-link">
-                            More info
-                            <i class="portfolio-arrow fas fa-long-arrow-alt-right"></i>
-                        </a>
-                    </figcaption>
-                </figure>
-
-                <figure class="portfolio-item">
-                    <img src="https://placeimg.com/640/640/any">
-                    <figcaption>
-                        <h3 class="portfolio-title">Project name</h3>
-                        <p class="portfolio-desc">Short desc</p>
-                        <a href="#" class="portfolio-link">
-                            More info
-                            <i class="portfolio-arrow fas fa-long-arrow-alt-right"></i>
-                        </a>
-                    </figcaption>
-                </figure>
-
-                <figure class="portfolio-item">
-                    <img src="https://placeimg.com/640/640/any">
-                    <figcaption>
-                        <h3 class="portfolio-title">Project name</h3>
-                        <p class="portfolio-desc">Short desc</p>
-                        <a href="#" class="portfolio-link">
-                            More info
-                            <i class="portfolio-arrow fas fa-long-arrow-alt-right"></i>
-                        </a>
-                    </figcaption>
-                </figure>
-
-                <figure class="portfolio-item">
-                    <img src="https://placeimg.com/640/640/any">
-                    <figcaption>
-                        <h3 class="portfolio-title">Project name</h3>
-                        <p class="portfolio-desc">Short desc</p>
-                        <a href="#" class="portfolio-link">
-                            More info
-                            <i class="portfolio-arrow fas fa-long-arrow-alt-right"></i>
-                        </a>
-                    </figcaption>
-                </figure>
-
-                <figure class="portfolio-item">
-                    <img src="https://placeimg.com/640/640/any">
-                    <figcaption>
-                        <h3 class="portfolio-title">Project name</h3>
-                        <p class="portfolio-desc">Short desc</p>
-                        <a href="#" class="portfolio-link">
-                            More info
-                            <i class="portfolio-arrow fas fa-long-arrow-alt-right"></i>
-                        </a>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact">
-        <div class="container">
-            <h2>Contact me</h2>
-            <form action="">
-                <label class="name">Name:
-                    <input type="text" id="name">
-                </label>
-
-                <label class="email">Email:
-                    <input type="email" id="email">
-                </label>
-
-                <label class="message">Message:
-                    <textarea id="message"></textarea>
-                </label>
-
-                <input class="button" type="submit" value="SEND" />
-            </form>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <h4>Find me on</h4>
-            <div class="icons">
-                <i class="icon fab fa-linkedin"></i>
-                <i class="icon fab fa-github-square"></i>
-            </div>
-        </div>
-    </footer>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
