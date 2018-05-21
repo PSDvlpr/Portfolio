@@ -33,3 +33,18 @@
     min-height: 100%;
     min-width: 100%;
 }
+
+.skills-icons {
+    font-size: 1.9rem;
+    display: flex;
+    justify-content: space-around;
+    color: $gold;
+
+    @include respond-to(medium) {
+        font-size: 3rem;
+    }
+}
+
+.learning {
+    margin-top: 1em;
+}
