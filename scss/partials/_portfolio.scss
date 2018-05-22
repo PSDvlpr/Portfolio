@@ -75,3 +75,77 @@
     text-decoration: none;
     align-self: flex-start;
 }
+
+.portfolio-modal {
+    position: fixed;
+    z-index: 1000;
+    top: 1.5em;
+    bottom: 1.5em;
+    left: 1.5em;
+    right: 1.5em;
+    background: $white;
+    box-shadow: 0 0 0 5em rgba(black, .5);
+}
+
+.portfolio-header {
+    text-align: left;
+    padding: 3em 0;
+}
+
+.portfolio-header:nth-of-type(2) {
+    background-image: url(../../images/about-pic.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.portfolio-title-box {
+    background: rgba($gold, .75);
+    padding: 1.5em 0 1.5em 1.5em;
+    color: $white;
+    width: 75%;
+
+    .portfolio-title {
+        font-size: 2.5rem;
+        margin-bottom: .5em;
+        display: inline-block;
+    }
+}
+
+.portfolio-subtitle {
+    font-size: 1rem;
+}
+
+.portfolio-content {
+    text-align: left;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.modal-close {
+    padding: 1em .6em;
+    position: absolute;
+    top: -1em;
+    left: -1em;
+    cursor: pointer;
+    background: $white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(black, .5)
+}
+
+.close-icon,
+.close-icon::after {
+    content: '';
+    display: block;
+    background: $black;
+    height: 3px;
+    width: 1.1em;
+    border-radius: 3px;
+}
+
+.close-icon {
+    transform: rotate(45deg);
+}
+
+.close-icon::after {
+    transform: rotate(-90deg);
+}
