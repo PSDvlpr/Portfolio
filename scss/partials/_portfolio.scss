@@ -85,6 +85,12 @@
     right: 1.5em;
     background: $white;
     box-shadow: 0 0 0 5em rgba(black, .5);
+
+    display: none;
+
+    &.open {
+        display: block;
+    }
 }
 
 .portfolio-header {
