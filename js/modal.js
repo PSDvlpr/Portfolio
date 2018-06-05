@@ -10,9 +10,28 @@ portfolioItems.addEventListener('click', e => {
     const modal = modalToggle.parentNode.nextElementSibling;
     const close = modal.querySelector('.modal-close');
 
-    modal.classList.add('open');
+    const modalOpen = () => {
+        modal.classList.add('open');
+        modal.style.animation = 'modalFadeIn 500ms forwards';
+    }
 
-    close.addEventListener('click', () => {
+    const modalClose = () => {
         modal.classList.remove('open');
+        modal.removeEventListener('animationend', modalClose);
+    }
+
+    const modalAnimation = () => {
+        modal.style.animation = 'modalFadeOut 500ms forwards';
+        modal.addEventListener('animationend', modalClose);
+    }
+
+    close.addEventListener('click', modalAnimation);
+
+    document.addEventListener('keydown', e => {
+        if (e.keyCode === 27) {
+            modalAnimation();
+        }
     });
+
+    modalOpen();
 });
