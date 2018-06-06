@@ -48,7 +48,7 @@
     }
 
     .about-text {
-
+        margin-left: .2em;
         @include respond-to(medium) {
             grid-row: 3 / 4;
         }
