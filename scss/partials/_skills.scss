@@ -17,7 +17,7 @@
 
     @supports(display: grid) {
         display: grid;
-        grid-template-columns: 1fr minmax(auto, 30em) 1fr;
+        grid-template-columns: 1fr minmax(auto, 40em) 1fr;
     }
 }
 
@@ -37,6 +37,7 @@
 .skills-icons {
     font-size: 1.9rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     color: $gold;
 

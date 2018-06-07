@@ -96,47 +96,48 @@
 
 .portfolio-header {
     text-align: left;
-    padding: 7em 0;
+    padding: 2em 0;
     margin-bottom: 2em;
     background-size: cover;
     background-position: center;
+    background-color: $black;
 }
 
-.header-1 {
-    background-image: url('../images/project-1.png');
-    background-position: bottom
-}
+// .header-1 {
+//     background-image: url('../images/project-1.png');
+//     background-position: bottom
+// }
 
-.header-2 {
-    background-image: url('../images/project-2.png');
-}
+// .header-2 {
+//     background-image: url('../images/project-2.png');
+// }
 
-.header-3 {
-    background-image: url('../images/project-3.png');
-}
+// .header-3 {
+//     background-image: url('../images/project-3.png');
+// }
 
-.header-4 {
-    background-image: url('../images/project-4.png');
-}
-.header-5 {
-    background-image: url('../images/project-5.png');
-}
+// .header-4 {
+//     background-image: url('../images/project-4.png');
+// }
+// .header-5 {
+//     background-image: url('../images/project-5.png');
+// }
 
-.header-6 {
-    background-image: url('../images/project-6.png');
-}
+// .header-6 {
+//     background-image: url('../images/project-6.png');
+// }
 
-.header-7 {
-    background-image: url('../images/project-7.png');
-}
+// .header-7 {
+//     background-image: url('../images/project-7.png');
+// }
 
-.header-8 {
-    background-image: url('../images/project-8.png');
-}
+// .header-8 {
+//     background-image: url('../images/project-8.png');
+// }
 
-.header-9 {
-    background-image: url('../images/project-9.png');
-}
+// .header-9 {
+//     background-image: url('../images/project-9.png');
+// }
 
 .portfolio-title-box {
     background: rgba($gold, .75);
@@ -200,15 +201,20 @@
 }
 
 .portfolio-preview {
-    width: 100vw;
+    width: 70vw;
     max-width: initial;
-    margin: 2em calc(50% - 50vw);
-    height: 20vh;
+    margin: 2em auto;
+    height: 40vh;
     object-fit: cover;
 
     @include respond-to(medium) {
-        height: 30vh;
+        width: 85vw;
+        height: 44vh;
     }
+}
+
+.future {
+    background-color: $black;
 }
 
 .modal-close {
