@@ -78,13 +78,14 @@
 
 .portfolio-modal {
     position: fixed;
-    z-index: 1000;
+    z-index: 10;
     top: 1.5em;
     bottom: 1.5em;
     left: 1.5em;
     right: 1.5em;
     background: $white;
     box-shadow: 0 0 0 5em rgba(black, .5);
+    overflow-x: hidden;
 
     display: none;
 
@@ -137,8 +138,6 @@
     background-image: url('../images/project-9.png');
 }
 
-
-
 .portfolio-title-box {
     background: rgba($gold, .75);
     padding: 1.5em 0 1.5em 1.5em;
@@ -160,17 +159,56 @@
     text-align: left;
     width: 85%;
     margin: 0 auto;
+
+    p {
+        @include respond-to(medium) {
+            font-size: 1.5rem;
+        }
+    }
+    h3 {
+        font-size: .8rem;
+
+        @include respond-to(medium) {
+            font-size: 1.1rem;
+        }
+    }
+
+    i {
+        color: $gold;
+        font-size: 1.5rem;
+        margin-right: 1em;
+
+        @include respond-to(medium) {
+            font-size: 3rem;
+        }
+    }
+}
+
+.portfolio-techs {
+    margin: 1.5em 0 1.5em;
+}
+
+.portfolio-preview {
+    width: 100vw;
+    max-width: initial;
+    margin: 2em calc(50% - 50vw);
+    height: 20vh;
+    object-fit: cover;
+
+    @include respond-to(medium) {
+        height: 30vh;
+    }
 }
 
 .modal-close {
     padding: 1em .6em;
-    position: absolute;
-    top: -1em;
-    left: -1em;
+    position: fixed;
+    top: .5em;
+    left: .5em;
     cursor: pointer;
     background: $white;
     border-radius: 50%;
-    box-shadow: 0 0 5px rgba(black, .5)
+    box-shadow: 0 0 5px rgba(black, .5);
 }
 
 .close-icon,
