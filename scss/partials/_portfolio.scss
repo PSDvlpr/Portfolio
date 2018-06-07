@@ -96,7 +96,7 @@
 
 .portfolio-header {
     text-align: left;
-    padding: 3em 0;
+    padding: 7em 0;
     margin-bottom: 2em;
     background-size: cover;
     background-position: center;
@@ -186,6 +186,17 @@
 
 .portfolio-techs {
     margin: 1.5em 0 1.5em;
+
+    img {
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+
+        @include respond-to(medium) {
+            width: 42px;
+            height: 42px;
+        }
+    }
 }
 
 .portfolio-preview {
