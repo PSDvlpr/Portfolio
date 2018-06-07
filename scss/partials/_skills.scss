@@ -40,6 +40,16 @@
     justify-content: space-around;
     color: $gold;
 
+    img {
+        width: 26px;
+        height: 26px;
+
+        @include respond-to(medium) {
+            width: 44px;
+            height: 44px;
+        }
+    }
+
     @include respond-to(medium) {
         font-size: 3rem;
     }
