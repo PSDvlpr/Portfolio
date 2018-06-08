@@ -16,4 +16,9 @@
 
 .icon {
     font-size: 3rem;
+    transition: all .5s ease-in-out;
+
+    &:hover {
+        color: $gold;
+    }
 }
