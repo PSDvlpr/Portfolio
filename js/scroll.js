@@ -1,14 +1,9 @@
-const nav = document.querySelectorAll('.js-nav');
 const menuToggle = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('nav');
 const wrapper = document.querySelector('.wrapper');
 
 const wrapperStyle = wrapper.style;
 const bodyClassList = document.body.classList;
-
-for (let i = 0; i < nav.length; i++) {
-    nav[i].addEventListener("click", scrollToID, false);
-}
 
 menuToggle.addEventListener('click', () => {
     wrapperStyle.transition = 'transform 250ms ease-in-out';
@@ -22,9 +17,14 @@ navigation.addEventListener('click', () => {
     menuToggle.classList.toggle('open');
 });
 
+const nav = document.querySelectorAll('.js-nav');
+
+for (let i = 0; i < nav.length; i++) {
+    nav[i].addEventListener("click", scrollToID, false);
+}
+
 function scrollToID(event) {
     var element = event.target;
-    event.preventDefault();
     var targetAddress = targetAddr(element);
     self.targetElement = document.getElementById(targetAddress);
     var targetOffset = Math.round(targetElement.getBoundingClientRect().top);
