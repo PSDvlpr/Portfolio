@@ -103,42 +103,6 @@
     background-color: $black;
 }
 
-// .header-1 {
-//     background-image: url('../images/project-1.png');
-//     background-position: bottom
-// }
-
-// .header-2 {
-//     background-image: url('../images/project-2.png');
-// }
-
-// .header-3 {
-//     background-image: url('../images/project-3.png');
-// }
-
-// .header-4 {
-//     background-image: url('../images/project-4.png');
-// }
-// .header-5 {
-//     background-image: url('../images/project-5.png');
-// }
-
-// .header-6 {
-//     background-image: url('../images/project-6.png');
-// }
-
-// .header-7 {
-//     background-image: url('../images/project-7.png');
-// }
-
-// .header-8 {
-//     background-image: url('../images/project-8.png');
-// }
-
-// .header-9 {
-//     background-image: url('../images/project-9.png');
-// }
-
 .portfolio-title-box {
     background: rgba($gold, .75);
     padding: 1.5em 0 1.5em 1.5em;
@@ -174,13 +138,41 @@
         }
     }
 
+    a {
+        margin-right: 1em;
+    }
+
     i {
         color: $gold;
         font-size: 1.5rem;
-        margin-right: 1em;
 
         @include respond-to(medium) {
             font-size: 3rem;
+        }
+    }
+
+    .portfolio-preview {
+        width: 70vw;
+        max-width: initial;
+        margin: 2em auto;
+        height: 40vh;
+        object-fit: cover;
+
+        @include respond-to(medium) {
+            display: none;
+            width: 85vw;
+            height: 44vh;
+        }
+    }
+
+    iframe {
+        display: none;
+
+        @include respond-to(medium) {
+            display: block;
+            margin-top: 1em;
+            width: 100%;
+            height: 40vh;
         }
     }
 }
@@ -198,20 +190,13 @@
             height: 42px;
         }
     }
-}
 
-.portfolio-preview {
-    width: 70vw;
-    max-width: initial;
-    margin: 2em auto;
-    height: 40vh;
-    object-fit: cover;
-
-    @include respond-to(medium) {
-        width: 85vw;
-        height: 44vh;
+    i {
+        margin-right: .7em;
     }
 }
+
+
 
 .future {
     background-color: $black;
